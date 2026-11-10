@@ -2,7 +2,7 @@
 
 Name: efibootmgr
 Version: 18
-Release: 8%{?dist}
+Release: 9%{?dist}
 Summary: EFI Boot Manager
 License: GPL-2.0-or-later
 URL: https://github.com/rhboot/%{name}/
@@ -46,6 +46,10 @@ git config --local --add efibootmgr.efidir %{efi_vendor}
 %doc README
 
 %changelog
+* Wed Feb 25 2026 Josue David Hernandez Gutierrez <josherna@redhat.com>
+- get_entry: return entry if it was found before reaching the end of the list
+  Resolves: RHEL-145517
+
 * Tue Oct 29 2024 Troy Dawson <tdawson@redhat.com>
 - Bump release for October 2024 mass rebuild:
   Resolves: RHEL-64018
